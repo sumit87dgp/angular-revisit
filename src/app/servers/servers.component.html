@@ -1,14 +1,19 @@
 <!-- Uncomment below code which does not work -->
 <!-- =============================================================== -->
-<!-- <p>servers works!</p>
-<app-server></app-server>
-<app-server></app-server>
-<button type="button" class="btn btn-primary" [disabled]="!allowNewServers">Add New Server</button> -->
+<p>servers works!</p>
+
+
 
 <!-- This code just works fine. Comment out below and uncomment out above to see the weirdness -->
 <!-- ==================================================================================================== -->
-<p>servers works!</p>
+<!-- <p>servers works!</p>
 <button type="button" class="btn btn-primary" [disabled]="!allowNewServers">Add New Server</button>
+<app-server></app-server>
+<app-server></app-server> -->
+<input type="text" name="" id="" class="form-control" [(ngModel)]="serverName">
+<button type="button" class="btn btn-primary" [disabled]="!allowNewServers" (click)="onCreateServer()" >Add New Server</button>
+<p>{{serverCreationStatus}}</p>
+
 <app-server></app-server>
 <app-server></app-server>
 

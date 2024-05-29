@@ -5,8 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './servers.component.html',
   styleUrl: './servers.component.css'
 })
-export class ServersComponent implements OnInit {
+export class ServersComponent {
   allowNewServers = false;
+  serverCreationStatus = 'No server was created'
+  serverName = 'TestServer'
+
 
   constructor(){
     setTimeout(()=>{
@@ -16,6 +19,10 @@ export class ServersComponent implements OnInit {
   }
   ngOnInit() {
     //throw new Error('Method not implemented.');
+  }
+
+  onCreateServer(){
+    this.serverCreationStatus = 'Server was created. Name is ' + this.serverName
   }
 
 }
